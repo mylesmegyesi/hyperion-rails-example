@@ -1,7 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'action_controller/railtie'
-require 'hyperion/sql/middleware'
 
 module Testapp
   class Application < Rails::Application
@@ -46,6 +45,5 @@ module Testapp
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-    config.middleware.use Hyperion::Sql::Middleware, connection_url: "sqlite3://#{Rails.root.join('db', 'development.sqlite3')}", ds: :sqlite
   end
 end
