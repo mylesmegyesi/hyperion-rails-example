@@ -1,0 +1,9 @@
+<h1>New person</h1>
+
+<%= form_tag create_person_path do %>
+  <%= text_field_tag('person[first_name]') %>
+  <%= text_field_tag('person[last_name]') %>
+  <%= submit_tag %>
+<% end %>
+
+<%= link_to 'Back', people_path %>

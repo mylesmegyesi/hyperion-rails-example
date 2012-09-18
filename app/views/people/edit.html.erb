@@ -1,0 +1,10 @@
+<h1>Editing person</h1>
+
+<%= form_tag update_person_path(key: @person[:key]), method: :put do %>
+  <%= text_field_tag('person[first_name]', @person[:first_name]) %>
+  <%= text_field_tag('person[last_name]', @person[:last_name]) %>
+  <%= submit_tag %>
+<% end %>
+
+<%= link_to 'Show', show_person_path(key: @person[:key]) %> |
+<%= link_to 'Back', people_path %>

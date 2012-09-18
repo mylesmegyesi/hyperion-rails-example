@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<span>First Name: <%= @person[:first_name] %></span>
+<span>Last Name: <%= @person[:last_name] %></span>
+
+<%= link_to 'Edit', edit_person_path(key: @person[:key]) %> |
+<%= link_to 'Back', people_path %>
