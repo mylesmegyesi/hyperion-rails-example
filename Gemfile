@@ -6,10 +6,12 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development do
+  gem 'sqlite' # for active record migrations
   gem 'hyperion-sqlite', '0.0.1.alpha5'
 end
 
 group :production do
+  gem 'pg' # for active record migrations
   gem 'hyperion-postgres', '0.0.1.alpha5'
 end
 
