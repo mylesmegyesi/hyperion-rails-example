@@ -9,6 +9,10 @@ group :development do
   gem 'hyperion-sqlite', '0.0.1.alpha5'
 end
 
+group :production do
+  gem 'hyperion-postgres', '0.0.1.alpha5'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

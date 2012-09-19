@@ -64,4 +64,10 @@ Testapp::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  #
+  # Use the DATABASE_URL environment variable to connection to postgres
+  # It should look similar to:
+  # DATABASE_URL = postgres://cspvswmvkblzsw:bwTTUFRBRgnb07VeFUSN1UjeZp@ec2-23-23-234-187.compute-1.amazonaws.com:5432/d1uh0jkh0n8j3l'
+
+  config.middleware.use Hyperion::Sql::Middleware, connection_url: ENV['DATABASE_URL'], ds: :postgres
 end
